@@ -1,0 +1,16 @@
+@startuml Style
+
+class Style {
+
+  - {static} styles : Style[]
+
+  - {static} FONTNAME : String
+  + indent : int
+  + color : Color
+  + font : Font
+  + fontSize : int
+  + leadgin : int
+
+}
+
+@enduml

@@ -1,0 +1,31 @@
+@startuml MenuController
+
+class MenuController {
+
+  - {static} serialVersionUID : Long
+  - parent : Frame
+  - presentation : Presentation
+
+  # {static} ABOUT : String
+  # {static} FILE : String
+  # {static} EXIT : String
+  # {static} GOTO : String
+  # {static} HELP : String
+  # {static} NEW : String
+  # {static} NEXT : String
+  # {static} OPEN : String
+  # {static} PAGENR : String
+  # {static} PREV : String
+  # {static} SAVE : String
+  # {static} VIEW : String
+
+  # {static} TESTFILE : String
+  # {static} SAVEFILE : String
+
+  # {static} IOEX : String
+  # {static} LOADERR : String
+  # {static} SAVERR : String
+
+}
+
+@enduml

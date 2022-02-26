@@ -1,0 +1,22 @@
+@startuml SlideViewerComponent
+
+class SlideViewerComponent{
+
+  - {static} serialVersionUID : long
+
+  - {static} BGCOLOR : Color
+  - {static} COLOR : Color
+  - {static} FONTNAME : String
+  - {static} FONTSTYLE : int
+  - {static} FONTHEIGHT : int
+  - {static} XPOS : int
+  - {static} YPOS : int
+
+  - slide : Slide
+  - labelFont : Font
+  - presentation : Presentation
+  - frame : JFrame
+
+}
+
+@enduml

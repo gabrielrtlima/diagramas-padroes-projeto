@@ -1,0 +1,11 @@
+@startuml TextItem
+
+class TextItem {
+
+  - text : String
+
+  - {static} EMPTYTEXT : String
+
+}
+
+@enduml

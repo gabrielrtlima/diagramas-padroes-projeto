@@ -1,0 +1,14 @@
+@startuml SlideViewerFrame
+
+class SlideViewerFrame {
+
+  - {static} serialVersionUID : long
+
+  - {static} JABTITLE : String
+
+  + {static} WIDTH : int
+  + {static} HEIGHT : int
+  
+}
+
+@enduml

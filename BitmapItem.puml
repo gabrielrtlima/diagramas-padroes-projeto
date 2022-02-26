@@ -1,0 +1,13 @@
+@startuml BitmapItem
+
+class BitmapItem {
+
+  - bufferedImage : BufferedImage
+  - imageName : String
+  
+  # {static} FILE : String
+  # {static} NOTFOUND : String
+
+}
+
+@enduml

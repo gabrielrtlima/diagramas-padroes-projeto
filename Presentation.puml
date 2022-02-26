@@ -1,0 +1,11 @@
+@startuml presentation
+
+class Presentation {
+
+  - title : String
+  - showList : ArrayList<Slide>
+  - currentSlideNumber : int
+
+}
+
+@enduml

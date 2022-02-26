@@ -1,0 +1,22 @@
+@startuml XMLAccessor
+
+class XMLAccessor {
+
+  # {static} DEFAULT_API_TO_USE : String
+
+  # {static} SHOWTITLE : String
+  # {static} SLIDETITLE : String
+  # {static} SLIDE : String
+  # {static} ITEM : String
+  # {static} LEVEL : String
+  # {static} KIND : String
+  # {static} TEXT : String
+  # {static} IMAGE : String
+
+  # {static} PCE : String
+  # {static} UNKNOWNTYPE : String
+  # {static} NFE : String
+
+}
+
+@enduml

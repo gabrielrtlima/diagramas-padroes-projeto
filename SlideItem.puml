@@ -1,0 +1,9 @@
+@startuml SlideItem
+
+abstract class SlideItem {
+
+  - level : int
+
+}
+
+@enduml

@@ -1,0 +1,7 @@
+@startuml KeyController
+
+class KeyController {
+  - presentation : Presentation
+}
+
+@enduml

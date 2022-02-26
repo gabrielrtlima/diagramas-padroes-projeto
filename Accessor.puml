@@ -1,0 +1,10 @@
+@startuml Accessor
+
+abstract class Accessor {
+
+  + {static} DEMO_NAME : String
+  + {static} DEFAULT_EXTENSION : String
+
+}
+
+@enduml

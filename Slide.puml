@@ -1,0 +1,13 @@
+@startuml Slide
+
+class Slide {
+
+  + {static} WIDTH : int
+  + {static} HEIGHT : int
+
+  # title : TextItem
+  # items : Vector<SlideItem>
+
+}
+
+@enduml
