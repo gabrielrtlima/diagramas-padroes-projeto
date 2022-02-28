@@ -2,13 +2,13 @@
 
 class SlideViewerFrame {
 
-  - {static} serialVersionUID : long
+  - {static} serialVersionUID : long = 3227L
 
-  - {static} JABTITLE : String
+  - {static} JABTITLE : String = "Jabberpoint 1.6"
 
   + {static} WIDTH : int
   + {static} HEIGHT : int
-  
+
 }
 
 @enduml

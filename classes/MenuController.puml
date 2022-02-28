@@ -2,29 +2,29 @@
 
 class MenuController {
 
-  - {static} serialVersionUID : Long
+  - {static} serialVersionUID : Long = 227L
   - parent : Frame
   - presentation : Presentation
 
-  # {static} ABOUT : String
-  # {static} FILE : String
-  # {static} EXIT : String
-  # {static} GOTO : String
-  # {static} HELP : String
-  # {static} NEW : String
-  # {static} NEXT : String
-  # {static} OPEN : String
-  # {static} PAGENR : String
-  # {static} PREV : String
-  # {static} SAVE : String
-  # {static} VIEW : String
+  # {static} ABOUT : String = "Sobre"
+  # {static} FILE : String = "Arquivo"
+  # {static} EXIT : String = "Sair"
+  # {static} GOTO : String = "Pular para"
+  # {static} HELP : String = "Ajuda"
+  # {static} NEW : String = "Novo"
+  # {static} NEXT : String = "Próximo"
+  # {static} OPEN : String = "Abrir"
+  # {static} PAGENR : String = "Número do Slide"
+  # {static} PREV : String = "Anterior"
+  # {static} SAVE : String = "Salvar"
+  # {static} VIEW : String = "Visualizar"
 
-  # {static} TESTFILE : String
-  # {static} SAVEFILE : String
+  # {static} TESTFILE : String = "classpath:test.xml"
+  # {static} SAVEFILE : String = "classpath:dump.xml"
 
-  # {static} IOEX : String
-  # {static} LOADERR : String
-  # {static} SAVERR : String
+  # {static} IOEX : String = "IO Exception: "
+  # {static} LOADERR : String = "Erro ao carregar"
+  # {static} SAVERR : String = "Erro ao salvar"
 
 }
 

@@ -4,7 +4,7 @@ class Style {
 
   - {static} styles : Style[]
 
-  - {static} FONTNAME : String
+  - {static} FONTNAME : String = "Helvetica"
   + indent : int
   + color : Color
   + font : Font

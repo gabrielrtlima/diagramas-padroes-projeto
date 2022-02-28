@@ -2,8 +2,8 @@
 
 class Slide {
 
-  + {static} WIDTH : int
-  + {static} HEIGHT : int
+  + {static} WIDTH : int = 1200
+  + {static} HEIGHT : int = 800
 
   # title : TextItem
   # items : Vector<SlideItem>

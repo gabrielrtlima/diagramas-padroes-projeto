@@ -4,7 +4,7 @@ class Presentation {
 
   - title : String
   - showList : ArrayList<Slide>
-  - currentSlideNumber : int
+  - currentSlideNumber : int = 0
 
 }
 

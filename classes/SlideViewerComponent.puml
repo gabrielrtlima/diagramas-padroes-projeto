@@ -2,20 +2,20 @@
 
 class SlideViewerComponent{
 
-  - {static} serialVersionUID : long
+  - {static} serialVersionUID : long = 227L
 
-  - {static} BGCOLOR : Color
-  - {static} COLOR : Color
-  - {static} FONTNAME : String
-  - {static} FONTSTYLE : int
-  - {static} FONTHEIGHT : int
-  - {static} XPOS : int
-  - {static} YPOS : int
+  - {static} BGCOLOR : Color = Color.white
+  - {static} COLOR : Color = Color.black
+  - {static} FONTNAME : String = "Dialog"
+  - {static} FONTSTYLE : int = Font.BOLD
+  - {static} FONTHEIGHT : int = 10
+  - {static} XPOS : int = 1100
+  - {static} YPOS : int = 20
 
   - slide : Slide
-  - labelFont : Font
-  - presentation : Presentation
-  - frame : JFrame
+  - labelFont : Font = null
+  - presentation : Presentation = null
+  - frame : JFrame = nul
 
 }
 

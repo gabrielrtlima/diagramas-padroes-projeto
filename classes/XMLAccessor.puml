@@ -2,20 +2,20 @@
 
 class XMLAccessor {
 
-  # {static} DEFAULT_API_TO_USE : String
+  # {static} DEFAULT_API_TO_USE : String = "dom"
 
-  # {static} SHOWTITLE : String
-  # {static} SLIDETITLE : String
-  # {static} SLIDE : String
-  # {static} ITEM : String
-  # {static} LEVEL : String
-  # {static} KIND : String
-  # {static} TEXT : String
-  # {static} IMAGE : String
+  # {static} SHOWTITLE : String = "showtitle"
+  # {static} SLIDETITLE : String = "slidetitle"
+  # {static} SLIDE : String = "slide"
+  # {static} ITEM : String = "item"
+  # {static} LEVEL : String = "level"
+  # {static} KIND : String = "kind"
+  # {static} TEXT : String = "text"
+  # {static} IMAGE : String = "image"
 
-  # {static} PCE : String
-  # {static} UNKNOWNTYPE : String
-  # {static} NFE : String
+  # {static} PCE : String = "Parser Configuration Exception"
+  # {static} UNKNOWNTYPE : String = "Unknown Element type"
+  # {static} NFE : String = "Number Format Exception"
 
 }
 

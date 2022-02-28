@@ -4,9 +4,9 @@ class BitmapItem {
 
   - bufferedImage : BufferedImage
   - imageName : String
-  
-  # {static} FILE : String
-  # {static} NOTFOUND : String
+
+  # {static} FILE : String = "Arquivo"
+  # {static} NOTFOUND : String = "não encontrado"
 
 }
 

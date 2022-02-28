@@ -2,8 +2,8 @@
 
 abstract class Accessor {
 
-  + {static} DEMO_NAME : String
-  + {static} DEFAULT_EXTENSION : String
+  + {static} DEMO_NAME : String = "Apresentação de Demonstração"
+  + {static} DEFAULT_EXTENSION : String = ".xml"
 
 }
 

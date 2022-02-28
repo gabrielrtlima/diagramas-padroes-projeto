@@ -2,7 +2,7 @@
 
 abstract class SlideItem {
 
-  - level : int
+  - level : int = 0
 
 }
 
