@@ -8,6 +8,9 @@ class Slide {
   # title : TextItem
   # items : Vector<SlideItem>
 
+  + draw(g : Graphics, area : Rectangle, view : ImageObserver) : void
+  - getScale(area : Rectangle) : float
+
 }
 
 @enduml

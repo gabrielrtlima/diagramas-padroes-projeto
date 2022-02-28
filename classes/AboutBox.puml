@@ -2,7 +2,7 @@
 
 class AboutBox {
 
-  + static void show(Frame parent)
+  + {static} show(parent : Frame) : void
 
 }
 

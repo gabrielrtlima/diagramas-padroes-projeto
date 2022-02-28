@@ -17,6 +17,11 @@ class SlideViewerComponent{
   - presentation : Presentation = null
   - frame : JFrame = nul
 
+  + SlideViewerComponent(pres : Presentation, frame : JFrame)
+  + getPreferredSize() : Dimension
+  + update(presentation : Presentation, data : Slide) : void
+  + paintComponent(g : Graphics) : void
+
 }
 
 @enduml

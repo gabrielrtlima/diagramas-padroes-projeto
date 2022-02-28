@@ -6,6 +6,21 @@ class Presentation {
   - showList : ArrayList<Slide>
   - currentSlideNumber : int = 0
 
+  + Presentation()
+  + Presentation(slideViewerComponent : SlideViewerComponent)
+  + getSize() : int
+  + getTitle() : String
+  + setTitle() : void
+  + setShowView(slideViewerComponent : SlideViewerComponent) : void
+  + setSlideNumber(number : int) : void
+  + prevSlide() : void
+  + nextSlide() : void
+  ~ clear() : void
+  + append() : void
+  + getSlide(number : int) : Slide
+  + getCurrentSlide() : Slide
+  + exit() : void
+
 }
 
 @enduml

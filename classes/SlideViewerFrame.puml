@@ -9,6 +9,10 @@ class SlideViewerFrame {
   + {static} WIDTH : int
   + {static} HEIGHT : int
 
+  + SlideViewerFrame(title : String, presentation Presentation)
+  + setupWindow(slideViewerComponent : SlideViewerComponent, presentation : Presentation)
+  
+
 }
 
 @enduml

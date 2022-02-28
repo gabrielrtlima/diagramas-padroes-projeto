@@ -17,6 +17,12 @@ class XMLAccessor {
   # {static} UNKNOWNTYPE : String = "Unknown Element type"
   # {static} NFE : String = "Number Format Exception"
 
+  - getTitle(element : Element, tagName : String) : String
+  + loadFile(presentation Presentation, filename : String) : void
+  + loadSlideItem(slide : Slide, item : Element) : void
+  + saveFile(presentation : Presentation, filename : String) : void
+  
+
 }
 
 @enduml

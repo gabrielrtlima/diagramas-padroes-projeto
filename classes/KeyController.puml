@@ -1,7 +1,12 @@
 @startuml KeyController
 
 class KeyController {
+
   - presentation : Presentation
+
+  + KeyController(p : Presentation)
+  + keyPressed(keyEvent : KeyEvent) : void
+
 }
 
 @enduml

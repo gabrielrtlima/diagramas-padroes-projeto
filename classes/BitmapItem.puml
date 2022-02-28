@@ -8,6 +8,13 @@ class BitmapItem {
   # {static} FILE : String = "Arquivo"
   # {static} NOTFOUND : String = "não encontrado"
 
+  + BitmapItem(level : int, name : String)
+  + BitmapItem()
+  + getName() : String
+  + getBoundingBox(g : Graphics, observer : ImageObserver, scale : float, myStyle : Style) : Rectangle
+  + draw(x : int, y : int, scale : float, g : Graphics, myStyle : Style, observer : ImageObserver) : void
+  + toString() : String
+
 }
 
 @enduml

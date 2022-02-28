@@ -11,6 +11,11 @@ class Style {
   + fontSize : int
   + leadgin : int
 
+  + {static} getStyle(level : int) : Style
+  + Style(indent : int, color : Color, points : int, leading : int)
+  + toString() : String
+  + getFont(scale : float) : Font
+
 }
 
 @enduml

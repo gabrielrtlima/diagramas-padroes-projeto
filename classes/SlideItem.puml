@@ -4,6 +4,12 @@ abstract class SlideItem {
 
   - level : int = 0
 
+  + SlideItem(lev : int)
+  + SlideItem()
+  + getLevel() : int
+  + getBoundingBox(g : Graphics, observer : ImageObserver, scale : float, style Style)
+  + draw(x : int, y : int, scale : float, g : Graphics, style : Style, observer : ImageObserver)
+
 }
 
 @enduml

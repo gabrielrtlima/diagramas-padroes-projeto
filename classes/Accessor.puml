@@ -5,6 +5,11 @@ abstract class Accessor {
   + {static} DEMO_NAME : String = "Apresentação de Demonstração"
   + {static} DEFAULT_EXTENSION : String = ".xml"
 
+  + {static} getDemoAccessor() : Accessor
+  + Accessor()
+  + loadFile(presentation : Presentation, fileName : String) : void
+  + saveFile(presentation : Presentation, fileName : String) : void
+
 }
 
 @enduml

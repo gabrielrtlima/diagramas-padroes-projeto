@@ -26,6 +26,9 @@ class MenuController {
   # {static} LOADERR : String = "Erro ao carregar"
   # {static} SAVERR : String = "Erro ao salvar"
 
+  + MenuController(frame : Frame, pres : Presentation)
+  + mkMenuItem(name : String) : MenuItem
+
 }
 
 @enduml

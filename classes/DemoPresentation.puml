@@ -1,7 +1,10 @@
 @startuml DemoPresentation
 
 class DemoPresentation {
-  
+
+  + loadFile(presentation : Presentation, unusedFilename : String) : void
+  + saveFile(presentation : Presentation, unusedFilename : String) : void
+
 }
 
 @enduml

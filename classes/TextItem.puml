@@ -6,6 +6,15 @@ class TextItem {
 
   - {static} EMPTYTEXT : String = "No Text Given"
 
+  + TextItem(level : int, string : String)
+  + TextItem()
+  + getText() : String
+  + getAttributedString(style : Style, scale : float) : AttributedString
+  + getBoundingBox(g : Graphics, observer ImageObserver, float : Scale, myStyle : Style) : Rectangle
+  + draw(x : int, y : int, scale : float, g : Graphics, myStyle : Style, o : ImageObserver) : void
+  - getLayouts(g : Graphics, s : Style, float scale) : List<TextLayout>
+  + toString() : String
+
 }
 
 @enduml
