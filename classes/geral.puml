@@ -265,7 +265,7 @@ Presentation "- presentation" -- KeyController
 Presentation "- presentation" -- MenuController
 SlideViewerComponent "- slideViewerComponent" -- "- presentation" Presentation
 SlideItem "# items" -- Slide
-Style -- Slide
+Style -- SlideItem
 MenuController o-- AboutBox
 SlideViewerComponent -- "- slide" Slide
 TextItem "# title"-- Slide
