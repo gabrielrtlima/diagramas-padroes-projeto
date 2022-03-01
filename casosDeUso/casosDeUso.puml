@@ -1,0 +1,25 @@
+@startuml
+
+arquivo as (Arquivo)
+novoSlide as (Novo Slide)
+abrirSlide as (Abrir Slide)
+salvarSlide as (Salvar Slide)
+abrirAjuda as (Ajuda)
+abrirSobre as (Sobre)
+visualizar as (Visualizar)
+proximoSlide as (Proximo Slide)
+slideAnterior as (Slide Anterior)
+pularPara as (Pular Slide)
+
+:Usuario: --> arquivo
+:Usuario: --> abrirAjuda
+:Usuario: --> visualizar
+abrirAjuda <.. abrirSobre : <<extends>>
+arquivo <.. novoSlide : <<extends>>
+arquivo <.. abrirSlide : <<extends>>
+arquivo <.. salvarSlide : <<extends>>
+visualizar <.. proximoSlide : <<extends>>
+visualizar <.. slideAnterior : <<extends>>
+visualizar <.. pularPara : <<extends>>
+
+@enduml
