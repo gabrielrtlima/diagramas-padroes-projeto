@@ -1,0 +1,17 @@
+@startuml
+
+Actor Usuario as Usuario
+
+Activate Interface
+Usuario -> Interface : Ajuda
+
+Activate MenuController
+Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
+
+Activate AboutBox
+MenuController -> AboutBox : show(Frame parent)
+Deactivate MenuController
+
+AboutBox -> Interface : Abrir janela de sobre
+
+@enduml

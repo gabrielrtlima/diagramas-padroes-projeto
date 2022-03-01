@@ -1,0 +1,19 @@
+@startuml
+
+Actor Usuario as Usuario
+
+Activate Interface
+Usuario -> Interface : Arquivo
+
+Activate MenuController
+Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
+
+Activate XMLAccessor
+MenuController -> XMLAccessor : loadFile(Presentation presentation, String fileName)
+Deactivate MenuController
+
+XMLAccessor --> Interface : Apresentação carregada
+Deactivate XMLAccessor
+Deactivate Interface
+
+@enduml

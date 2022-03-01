@@ -1,0 +1,26 @@
+@startuml
+
+Actor Usuario as Usuario
+
+Activate Interface
+Usuario -> Interface : Visualizar
+
+Activate MenuController
+Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
+
+Activate Presentation
+MenuController -> Presentation : nextSlide()
+Deactivate MenuController
+
+Activate SlideViewComponent
+Presentation -> SlideViewComponent : update(this, getCurrentSlide())
+Deactivate Presentation
+
+Activate Frame
+SlideViewComponent -> Frame : setTitle(presentation.getTitle())
+Deactivate SlideViewComponent
+Frame -> Interface : Mostrar próximo Slide
+Deactivate Interface
+
+
+@enduml
