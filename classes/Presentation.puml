@@ -1,8 +1,8 @@
-@startuml presentation
+@startuml Presentation
 
 class Presentation {
 
-  - title : String
+  - title : string
   - showList : ArrayList<Slide>
   - currentSlideNumber : int = 0
 

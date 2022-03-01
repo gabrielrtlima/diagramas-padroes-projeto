@@ -19,9 +19,9 @@ class XMLAccessor {
 
   - getTitle(element : Element, tagName : String) : String
   + loadFile(presentation Presentation, filename : String) : void
-  + loadSlideItem(slide : Slide, item : Element) : void
+  # loadSlideItem(slide : Slide, item : Element) : void
   + saveFile(presentation : Presentation, filename : String) : void
-  
+
 
 }
 
