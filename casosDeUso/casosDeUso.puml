@@ -1,15 +1,16 @@
 @startuml
 
+left to right direction
 arquivo as (Arquivo)
-novoSlide as (Novo Slide)
-abrirSlide as (Abrir Slide)
-salvarSlide as (Salvar Slide)
+novoSlide as (Novo)
+abrirSlide as (Abrir)
+salvarSlide as (Salvar)
 abrirAjuda as (Ajuda)
 abrirSobre as (Sobre)
 visualizar as (Visualizar)
-proximoSlide as (Proximo Slide)
-slideAnterior as (Slide Anterior)
-pularPara as (Pular Slide)
+proximoSlide as (Próximo)
+slideAnterior as (Anteior)
+pularPara as (Pular Para)
 
 :Usuario: --> arquivo
 :Usuario: --> abrirAjuda
