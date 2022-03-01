@@ -12,7 +12,7 @@ Activate XMLAccessor
 MenuController -> XMLAccessor : loadFile(Presentation presentation, String fileName)
 Deactivate MenuController
 
-XMLAccessor --> Interface : Apresentação carregada
+XMLAccessor --> Interface : repaint()
 Deactivate XMLAccessor
 Deactivate Interface
 

@@ -12,6 +12,6 @@ Activate AboutBox
 MenuController -> AboutBox : show(Frame parent)
 Deactivate MenuController
 
-AboutBox -> Interface : Abrir janela de sobre
+AboutBox -> Interface : repaint()
 
 @enduml

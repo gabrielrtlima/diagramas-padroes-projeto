@@ -9,13 +9,11 @@ Activate MenuController
 Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
 
 Activate Presentation
-MenuController -> Presentation : nextSlide()
+MenuController -> Presentation : setSlideNumber(pageNumber - 1)
 Deactivate MenuController
-
 Activate SlideViewerComponent
 Presentation -> SlideViewerComponent : update(this, getCurrentSlide())
 Deactivate Presentation
-
 Activate Frame
 SlideViewerComponent -> Frame : setTitle(presentation.getTitle())
 SlideViewerComponent -> Interface : repaint()

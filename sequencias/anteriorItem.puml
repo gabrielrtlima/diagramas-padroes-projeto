@@ -12,15 +12,15 @@ Activate Presentation
 MenuController -> Presentation : prevSlide()
 Deactivate MenuController
 
-Activate SlideViewComponent
-Presentation -> SlideViewComponent : update(this, getCurrentSlide())
+Activate SlideViewerComponent
+Presentation -> SlideViewerComponent : update(this, getCurrentSlide())
 Deactivate Presentation
 
 Activate Frame
-SlideViewComponent -> Frame : setTitle(presentation.getTitle())
-Deactivate SlideViewComponent
-Frame -> Interface : Mostrar slide anterior
+SlideViewerComponent -> Frame : setTitle(presentation.getTitle())
+SlideViewerComponent -> Interface : repaint()
+Deactivate Frame
+Deactivate SlideViewerComponent
 Deactivate Interface
-
 
 @enduml
