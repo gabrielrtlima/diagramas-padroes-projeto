@@ -1,10 +1,6 @@
 @startuml
 
-Actor Usuario as Usuario
-
 Activate Interface
-Usuario -> Interface : Visualizar
-
 Activate MenuController
 Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
 
