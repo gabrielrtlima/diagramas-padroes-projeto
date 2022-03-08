@@ -253,17 +253,14 @@ class XMLAccessor {
 
 SlideItem <|-- BitmapItem
 Accessor <|-- DemoPresentation
-KeyAdapter <|-- KeyController
-MenuBar <|-- MenuController
-JComponent <|-- SlideViewerComponent
-JFrame <|-- SlideViewerFrame
 SlideItem <|-- TextItem
 Accessor <|-- XMLAccessor
+SlideViewerFrame o-- Presentation
 
 Accessor o-- Presentation
 Presentation "- presentation" -- KeyController
 Presentation "- presentation" -- MenuController
-SlideViewerComponent "- slideViewerComponent" -- "- presentation" Presentation
+Presentation <|-- SlideViewerComponent
 SlideItem "# items" -- Slide
 Style -- SlideItem
 MenuController o-- AboutBox
