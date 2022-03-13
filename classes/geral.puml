@@ -261,8 +261,8 @@ Accessor o-- Presentation
 Presentation "- presentation" -- KeyController
 Presentation "- presentation" -- MenuController
 Presentation <|-- SlideViewerComponent
-SlideItem "# items" -- Slide
-Style -- SlideItem
+Style -- BitmapItem
+Style -- TextItem
 MenuController o-- AboutBox
 SlideViewerComponent -- "- slide" Slide
 TextItem "# title"-- Slide
