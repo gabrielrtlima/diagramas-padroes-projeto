@@ -1,0 +1,17 @@
+@startuml abrirArquivo
+
+Activate Interface
+Activate MenuController
+Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
+
+Activate Presentation
+MenuController -> Presentation : clear()
+deactivate Presentation
+
+Activate XMLDataPresentation
+MenuController -> XMLDataPresentation : loadFile(Presentation presentation, String fileName)
+Deactivate MenuController
+Deactivate XMLDataPresentation
+Deactivate Interface
+
+@enduml

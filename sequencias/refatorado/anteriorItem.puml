@@ -1,0 +1,21 @@
+@startuml anteriorItem
+
+Activate Interface
+Activate MenuController
+Interface -> MenuController : actionPerformed(ActionEvent actionEvent)
+
+Activate Presentation
+MenuController -> Presentation : prevSlide()
+Deactivate MenuController
+
+Activate SlideViewerComponent
+Presentation -> SlideViewerComponent : update(this, getCurrentSlide()), repaint()
+Deactivate Presentation
+
+Activate Frame
+SlideViewerComponent -> Frame : setTitle(presentation.getTitle())
+Deactivate Frame
+Deactivate SlideViewerComponent
+Deactivate Interface
+
+@enduml
