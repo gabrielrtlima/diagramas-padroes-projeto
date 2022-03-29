@@ -1,0 +1,206 @@
+@startuml
+skinparam classAttributeIconSize 0
+class SlideItem{
+- level : int
++ SlideItem(level : int)
++ SlideItem()
++ getLevel() : int
++ {abstract} getBoundingBox(graphics : Graphics, observer : ImageObserver, scale : float, style : Style) : Rectangle
++ {abstract} draw(x : int, y : int, scale : float, graphics : Graphics, style : Style, observer : ImageObserver) : void
+}
+
+class Style{
+- {static} styles : Style[]
+- {static} FONTNAME : String
++ indent : int
++ color : Color
+font : Font
+fontSize : int
++ leading : int
++ Style(indent : int, color : Color, points : int, leading : int)
++ {static} createStyles() : void
++ {static} getStyle(level : int) : Style
++ toString() : String
++ getFont(scale : float) : Font
+}
+class XMLDataPresentation{
+# {static} SHOWTITLE : String
+# {static} SLIDETITLE : String
+# {static} SLIDE : String
+# {static} ITEM : String
+# {static} LEVEL : String
+# {static} KIND : String
+# {static} TEXT : String
+# {static} IMAGE : String
+# {static} PCE : String
+# {static} UNKNOWNTYPE : String
+# {static} NFE : String
+- getTitle(element : Element, tagName : String) : String
++ loadFile(presentation : Presentation, filename : String) : void
+# loadSlideItem(slide : Slide, item : Element) : void
++ saveFile(presentation : Presentation, filename : String) : void
+}
+XMLDataPresentation ..|> IDataPresentation
+
+class MenuController{
+- frame : Frame
+- presentation : Presentation
+- menuItem : MenuItem
+- slideViewerComponent : SlideViewerComponent
+- {static} serialVersionUID : long
+# {static} ABOUT : String
+# {static} FILE : String
+# {static} EXIT : String
+# {static} GOTO : String
+# {static} HELP : String
+# {static} NEW : String
+# {static} NEXT : String
+# {static} OPEN : String
+# {static} PAGENR : String
+# {static} PREV : String
+# {static} SAVE : String
+# {static} VIEW : String
+# {static} TESTFILE : String
+# {static} SAVEFILE : String
+# {static} IOEX : String
+# {static} LOADERR : String
+# {static} SAVEERR : String
++ MenuController(frame : Frame, presentation : Presentation, slideViewerComponent : SlideViewerComponent)
++ mkMenuItem(name : String, letraAtalho : String) : MenuItem
+- addNewInFile(menu : Menu) : void
+- addOpenInFile(menu : Menu) : void
+- addSaveInFile(menu : Menu) : void
+- addExitInFile(menu : Menu) : void
+- addNextInView(menu : Menu) : void
+- addPrevInView(menu : Menu) : void
+- addGoToInView(menu : Menu) : void
+- addAboutInHelp(menu : Menu) : void
+}
+
+class Slide{
++ title : TextItem
+# items : Vector<SlideItem>
++ Slide()
++ append(anItem : SlideItem) : void
++ getTitle() : String
++ getTitleItem() : TextItem
++ setTitle(newTitle : String) : void
++ append(level : int, message : String) : void
++ getSlideItems() : Vector<SlideItem>
++ getSize() : int
+}
+
+class Presentation{
+- title : String
+- showList : ArrayList<Slide>
+- currentSlideNumber : int
++ Presentation()
++ getSize() : int
++ getTitle() : String
++ setTitle(title : String) : void
++ getSlideNumber() : int
++ setSlideNumber(number : int) : void
++ prevSlide() : void
++ nextSlide() : void
++ clear() : void
++ append(slide : Slide) : void
++ getSlide(number : int) : Slide
++ getCurrentSlide() : Slide
+}
+class KeyController{
+- presentation : Presentation
+- slideViewerComponent : SlideViewerComponent
++ KeyController(presentation : Presentation, slideViewerComponent : SlideViewerComponent)
++ keyPressed(keyEvent : KeyEvent) : void
+}
+KeyController --|> KeyAdapter
+class SlideViewerFrame{
+- {static} serialVersionUID : long
+- {static} JABTITLE : String
++ {static} WIDTH : int
++ {static} HEIGHT : int
++ SlideViewerFrame(title : String, presentation : Presentation)
++ setupWindow(slideViewerComponent : SlideViewerComponent, presentation : Presentation) : void
+}
+
+class TextItem{
+- text : String
+- {static} EMPTYTEXT : String
++ TextItem(level : int, string : String)
++ TextItem()
++ getText() : String
++ getAttributedString(style : Style, scale : float) : AttributedString
++ getBoundingBox(graphics : Graphics, observer : ImageObserver, scale : float, style : Style) : Rectangle
++ draw(x : int, y : int, scale : float, graphics : Graphics, style : Style, observer : ImageObserver) : void
+- getLayouts(graphics : Graphics, style : Style, scale : float) : List<TextLayout>
++ toString() : String
+}
+TextItem --|> SlideItem
+
+class DemoPresentation{
++ loadFile(presentation : Presentation, unusedFilename : String) : void
++ saveFile(presentation : Presentation, unusedFilename : String) : void
+}
+DemoPresentation ..|> IDataPresentation
+
+class BitmapItem{
+- bufferedImage : BufferedImage
+- imageName : String
+# {static} FILE : String
+# {static} NOTFOUND : String
++ BitmapItem(level : int, name : String)
++ BitmapItem()
++ getName() : String
++ getBoundingBox(graphics : Graphics, observer : ImageObserver, scale : float, myStyle : Style) : Rectangle
++ draw(x : int, y : int, scale : float, graphics : Graphics, myStyle : Style, observer : ImageObserver) : void
++ toString() : String
+}
+BitmapItem --|> SlideItem
+
+class SlideViewerComponent{
+- {static} serialVersionUID : long
+- {static} BGCOLOR : Color
+- {static} COLOR : Color
+- {static} FONTNAME : String
+- {static} FONTSTYLE : int
+- {static} FONTHEIGHT : int
+- {static} XPOS : int
+- {static} YPOS : int
+- slide : Slide
+- labelFont : Font
+- presentation : Presentation
+- frame : JFrame
++ SlideViewerComponent(presentation : Presentation, frame : JFrame)
++ getPreferredSize() : Dimension
++ update() : void
++ paintComponent(graphics : Graphics) : void
++ draw(graphics : Graphics, area : Rectangle, imageObserver : ImageObserver, slide : Slide) : void
+- getScale(area : Rectangle) : float
+}
+
+class JabberPointApplication{
+# {static} IOERR : String
+# {static} JABERR : String
+# {static} JABVERSION : String
++ {static} main(argv : String[]) : void
++ run(args : String) : void
+}
+
+Presentation -left- SlideViewerFrame
+Presentation -up- SlideViewerComponent
+MenuController -left- Presentation
+SlideViewerFrame -down- MenuController
+SlideViewerComponent -down- SlideViewerFrame
+Presentation -down- KeyController
+Presentation -right- Slide
+Presentation -down- JabberPointApplication
+XMLDataPresentation -up- JabberPointApplication
+Slide -right- SlideItem
+Style -down- SlideItem
+KeyController -down- MenuController
+
+interface IDataPresentation{
+loadFile(presentation : Presentation, fileName : String) : void
+saveFile(presentation : Presentation, fileName : String) : void
+}
+@enduml
